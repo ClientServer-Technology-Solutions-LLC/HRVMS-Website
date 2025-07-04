@@ -210,6 +210,10 @@ body {
 
 
     /* feature section */
+    #services{
+        background-color: #E9F6F9;
+
+    }
     .feature-card {
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -286,7 +290,9 @@ body {
 
 
  /* upgrade feature */
-
+/* .upgradeFeature_sec{
+  background-color: #E9F6F9;
+} */
  .icon-circle {
   width: 80px;
   height: 80px;
@@ -336,6 +342,10 @@ body {
 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
  
+}
+.dashboard img{
+  border:1px solid;
+  border-radius: 10px;
 }
 
 /* .industry-card:hover {
@@ -695,5 +705,8 @@ body {
     }
     .follow-Us div{
       margin-left: 120px;
+    }
+    .hero-content{
+      margin-top: 40px;
     }
 }
