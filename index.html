@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HRVMS-website</title>
+
+
+   <!-- font family -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"> 
+  <!-- AOS CSS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animation.css">
+</head>
+<body>
+
+  <!-- Header/Navbar -->
+<!-- Header/Navbar -->
+<nav class="navbar navbar-expand-lg bg-white border-bottom px-3">
+  <div class="container-fluid">
+    
+    <!-- Logo -->
+    <a class="navbar-brand me-4" href="#">
+      <img src="images/logo.png" alt="logo"   data-aos="fade-right" class="logo-pulse" />
+    </a>
+
+    <!-- Hamburger icon (only visible below lg) -->
+      <button class="navbar-toggler custom-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="hamburger-wrapper">
+          <div class="line top"></div>
+          <div class="line middle"></div>
+          <div class="line bottom"></div>
+        </div>
+      </button>
+
+
+
+    <!-- Collapsible Navigation Items -->
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+      
+      <!-- Left nav links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" data-aos="fade-down">
+        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Our Features</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="#services">Services</a></li> -->
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact us</a></li>
+        <div class="d-lg-none text-center mt-3">
+          <a href="#login" class="btn login-option">Log In</a>
+        </div>
+      </ul>
+
+      <!-- Right elements: search + buttons -->
+    
+        <!-- <div class="search-container">
+          <input type="text" class="form-control search-input" placeholder="Search..." />
+          <button class="btn search-btn">
+            <i class="bi bi-search search-icon"></i>
+            <i class="bi bi-x-lg clear-icon" style="display: none;"></i>
+          </button>
+        </div> -->
+
+        <!-- <button type="button" class="btn btn-primary">Get in Touch</button> -->
+        <button type="button" class="btn btn-outline-dark login-btn" data-aos="fade-left">Log In</button>
+     
+    </div>
+
+  </div>
+</nav>
+
+
+  <!-- Hero Section -->
+  <section id="hero" class="text-center py-5">
+    <div class="row g-5 align-items-center form-container" >
+    <!-- Left Side: Hero Text + Image -->
+    <div class="col-lg-7 mt-0
+    " data-aos="fade-right">
+      <div class="mb-4 hero-content">
+        <h2 class="fw-bold mb-3 text-start">All-in-One HR Solution for <br>Growing Teams</h2>
+        <p class="lead">
+          Streamline HR with an all-in-one platform for payroll, attendance, hiring, and compliance.
+          Save time, reduce errors, boost employee engagement, and stay compliant—so you can focus on growing your business.
+        </p>
+      </div>
+      <div>
+        <img src="images/banner.png" alt="HR Banner" class="img-fluid" />
+      </div>
+    </div>
+
+    <!-- Right Side: Contact Form -->
+    <div class="col-lg-5" data-aos="fade-left">
+      <div class="form-border-animated">
+      <form class="bg-white p-4  form-container" >
+        <h3 class="mb-4 fw-semibold">Request a Free Demo</h3>
+
+        <div class="mb-3">
+          <label for="fullname" class="form-label text-start">Full Name</label>
+          <input type="text" class="form-control" id="fullname" placeholder="Enter your full name" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label text-start">Work Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your work email" required />
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="country" class="form-label">Country</label>
+            <select class="form-select" id="country" required>
+              <option value="">Select Country</option>
+              <option value="IN">India</option>
+              <option value="US">United States</option>
+              <option value="UK">United Kingdom</option>
+              <option value="CA">Canada</option>
+              <option value="AU">Australia</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required />
+          </div>
+        </div>
+
+        <div class="mt-3 mb-3">
+          <label for="company" class="form-label">Company Name</label>
+          <input type="text" class="form-control" id="company" placeholder="Enter your company name" required />
+        </div>
+
+        <div class="mb-4">
+          <label for="employees" class="form-label">Number of Employees</label>
+          <select class="form-select" id="employees" required>
+            <option value="">Select</option>
+            <option value="1-10">1 – 10</option>
+            <option value="11-50">11 – 50</option>
+            <option value="51-200">51 – 200</option>
+            <option value="201-500">201 – 500</option>
+            <option value="500+">500+</option>
+          </select>
+        </div>
+
+        <button type="submit" class="w-100 submit-btn">Submit</button>
+      </form>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="bg-white py-5">
+    <div class="container">
+      <div class="product-header">
+        <h2>PRODUCT FEATURES</h2>
+        <h3>All Your HR Needs, One Seamless Solution</h3>
+        <p>Redefining Workforce Management with Smart HR Solutions</p>
+      </div>
+   <div class="container py-5">
+  <div class="row">
+    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card feature-card h-100 shadow-sm">
+        <div class="card-body text-center">
+          
+            <img src="images/proIcon-1.png" alt="icon" class="feature-icon mb-3" />
+            <h5 class="card-title">Project Timesheets</h5>
+        
+          <p class="card-text">
+            Lorem Ipsum has been the is with industry's standard printer took a galley of type and scrambled it to make a types.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="card feature-card h-100 shadow-sm">
+        <div class="card-body text-center">
+          <img src="images/manIcon-2.png" alt="icon" class="feature-icon mb-3" />
+          <h5 class="card-title">Management Structure</h5>
+          <p class="card-text">
+            Lorem Ipsum has been the is with industry's standard printer took a galley of type and scrambled it to make a types.
+          </p>
+        </div>
+      </div>
+    </div>
+
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="card feature-card h-100 shadow-sm">
+        <div class="card-body text-center">
+          <img src="images/hrIcon-3.png" alt="icon" class="feature-icon mb-3" />
+          <h5 class="card-title">Hiring & Onboarding</h5>
+          <p class="card-text">
+            Lorem Ipsum has been the is with industry's standard printer took a galley of type and scrambled it to make a types.
+          </p>
+        </div>
+      </div>
+    </div>
+
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="card feature-card h-100 shadow-sm">
+        <div class="card-body text-center">
+          <img src="images/nuIcon-4.png" alt="icon" class="feature-icon mb-3" />
+          <h5 class="card-title">News & Updates</h5>
+          <p class="card-text">
+            Lorem Ipsum has been the is with industry's standard printer took a galley of type and scrambled it to make a types.
+          </p>
+        </div>
+      </div>
+    </div>
+
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="card feature-card h-100 shadow-sm">
+        <div class="card-body text-center">
+          <img src="images/faIcon-5.png" alt="icon" class="feature-icon mb-3" />
+          <h5 class="card-title">Facial Attendance</h5>
+          <p class="card-text">
+            Lorem Ipsum has been the is with industry's standard printer took a galley of type and scrambled it to make a types.
+          </p>
+        </div>
+      </div>
+    </div>
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="card feature-card h-100 shadow-sm">
+        <div class="card-body text-center">
+          <img src="images/payIcon-6.png" alt="icon" class="feature-icon mb-3" />
+          <h5 class="card-title">Payroll & Payslip Access</h5>
+          <p class="card-text">
+            Lorem Ipsum has been the is with industry's standard printer took a galley of type and scrambled it to make a types.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Trusted Organizations -->
+  <section>
+<div class="tructed-organiation">
+  <p>Trusted by 100+ Organizations</p>
+  <div class="logo-marquee-wrapper">
+    <div class="logo-marquee">
+      <div class="logo-track">
+        <img src="images/icon-1.png" alt="icon" />
+        <img src="images/icon-2.png" alt="icon" />
+        <img src="images/icon-3.png" alt="icon" />
+        <img src="images/icon-4.png" alt="icon" />
+        <img src="images/icon-5.png" alt="icon" />
+        <img src="images/icon-6.png" alt="icon" />
+        <img src="images/icon-7.png" alt="icon" />
+        <img src="images/icon-8.png" alt="icon" />
+        <img src="images/icon-9.png" alt="icon" />
+        <img src="images/icon-10.png" alt="icon" />
+      </div>
+
+      <div class="logo-track">
+        <img src="images/icon-1.png" alt="icon" />
+        <img src="images/icon-2.png" alt="icon" />
+        <img src="images/icon-3.png" alt="icon" />
+        <img src="images/icon-4.png" alt="icon" />
+        <img src="images/icon-5.png" alt="icon" />
+        <img src="images/icon-6.png" alt="icon" />
+        <img src="images/icon-7.png" alt="icon" />
+        <img src="images/icon-8.png" alt="icon" />
+        <img src="images/icon-9.png" alt="icon" />
+        <img src="images/icon-10.png" alt="icon" />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </section>
+
+
+
+  <!-- upgrade Features -->
+   <section class="mt-3 upgradeFeature_sec">
+      <div>
+      <div class="product-header">
+        <h2>UPGRADED FEATURES</h2>
+        <h3>Adapt. Evolve. Grow - With QuantaHR</h3>
+        <p>Shaping the future of work, with QuantaHR leading in HR excellence.</p>
+      </div>
+
+        <div class="container py-4">
+          <!-- Card Section -->
+          <div class="row justify-content-center text-center">
+            <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="0">
+              <div class="hover-effect">
+                <div class="card-body">
+                  <div class="icon-circle mb-3">
+                    <img src="images/peopleDataIcon.png" alt="icon" class="img-fluid" />
+                  </div>
+                  <h5 class="card-title">People data & Strategic Analytics</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="150">
+              <div class=" h-100 hover-effect">
+                <div class="card-body">
+                  <div class="icon-circle mb-3">
+                    <img src="images/payrollExpIcon.png" alt="icon" class="img-fluid" />
+                  </div>
+                  <h5 class="card-title">Payroll & Expense Management</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="hover-effect">
+                <div class="card-body">
+                  <div class="icon-circle mb-3">
+                    <img src="images/hiringOnBoardIcon.png" alt="icon" class="img-fluid" />
+                  </div>
+                  <h5 class="card-title">Hiring and Onboarding</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        
+          <div class="text-center mt-4" data-aos="fade-up">
+            <img src="images/upgradefeature.png" alt="upgradeFeature" class="img-fluid" />
+          </div>
+        </div>
+
+
+      </div>
+
+   </section>
+
+   <!-- Industries we serve -->
+   <section class="">
+      <div class="industries-serve">
+        <div class="product-header">
+          <h2>INDUSTRIES WE SERVE</h2>
+          <h3>Tailored Solutions for Your Industry</h3>
+          <p>QuantaHR Software Designed for Your Unique Business Needs</p>
+        </div>
+
+       <div class="container py-5">
+  <div class="row g-4">
+    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+      <div class="card industry-card h-100 text-center shadow-sm">
+        <div class="card-body">
+          
+               <img src="images/TB-1.png" alt="icon" class="industry-icon mb-3" />
+               <h5 class="card-title">Tech & Business Services</h5>
+        
+          <p class="card-text">
+            Lorem Ipsum has been the is with industry's standard printer took a galley of type and scrambled it to make a types.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+      <div class="card industry-card h-100 text-center shadow-sm">
+        <div class="card-body">
+          <img src="images/LM-2.png" alt="icon" class="industry-icon mb-3" />
+          <h5 class="card-title">Life Sciences & Manufacturing</h5>
+          <p class="card-text">
+            Lorem Ipsum has been the is with industry's standard printer took a galley of type and scrambled it to make a types.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+      <div class="card industry-card h-100 text-center shadow-sm">
+        <div class="card-body">
+          <img src="images/FBI-3.png" alt="icon" class="industry-icon mb-3" />
+          <h5 class="card-title">Finance, Banking & Insurance</h5>
+          <p class="card-text">
+            Lorem Ipsum has been the is with industry's standard printer took a galley of type and scrambled it to make a types.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+      <div class="card industry-card h-100 text-center shadow-sm">
+        <div class="card-body">
+          <img src="images/RCI-4.png" alt="icon" class="industry-icon mb-3" />
+          <h5 class="card-title">Retail, Commerce & Other Industries</h5>
+          <p class="card-text">
+            Lorem Ipsum has been the is with industry's standard printer took a galley of type and scrambled it to make a types.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+   </section>
+
+   <!-- Testimonials -->
+<section class="testimonials-section py-5">
+  <div class="container">
+    <div class="product-header">
+        <h2>TESTIMONIALS</h2>
+        <h3>Voices of Our Valued Customers</h3>
+        <p>Here’s what our clients are saying about working with QuantaHR.</p>
+      </div>
+
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- Carousel indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+      </div>
+
+      <!-- Carousel inner -->
+      <div class="carousel-inner">
+
+        <!-- First slide -->
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <!-- Card 1 -->
+            <div class="col-md-4 mb-4" data-aos="fade-right">
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <p>"Amazing service and support. Truly satisfied with their professionalism!"</p>
+                </div>
+                <div class="testimonial-footer green-bg">
+                  <div class="profile-pic-container">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Lance Jarvis" class="profile-pic">
+                  </div>
+                  <h5 class="profile-name">Lance Jarvis</h5>
+                
+                </div>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-4 mb-4" data-aos="fade-down">
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <p>"Their app helped streamline our operations. Highly recommended!"</p>
+                </div>
+                <div class="testimonial-footer purple-bg">
+                  <div class="profile-pic-container">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ericka Lynda" class="profile-pic">
+                  </div>
+                  <h5 class="profile-name">Ericka Lynda</h5>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4 mb-4" data-aos="fade-left">
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <p>"Quick, easy, and efficient – just what we needed for growth."</p>
+                </div>
+                <div class="testimonial-footer blue-bg">
+                  <div class="profile-pic-container">
+                    <img src="https://randomuser.me/api/portraits/men/28.jpg" alt="Neil Wilford" class="profile-pic">
+                  </div>
+                  <h5 class="profile-name">Neil Wilford</h5>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second slide -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <!-- Card 4 -->
+            <div class="col-md-4 mb-4" data-aos="fade-left">
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <p>"Exceptional support team – solved our issues in no time!"</p>
+                </div>
+                <div class="testimonial-footer purple-bg">
+                  <div class="profile-pic-container">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Julia Holmes" class="profile-pic">
+                  </div>
+                  <h5 class="profile-name">Julia Holmes</h5>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-md-4 mb-4" data-aos="fade-left">
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <p>"Helped us increase productivity by 30%. Love the features!"</p>
+                </div>
+                <div class="testimonial-footer green-bg">
+                  <div class="profile-pic-container">
+                    <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Karan Patel" class="profile-pic">
+                  </div>
+                  <h5 class="profile-name">Karan Patel</h5>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-md-4 mb-4" data-aos="fade-left">
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <p>"Beautifully designed and easy to navigate platform."</p>
+                </div>
+                <div class="testimonial-footer blue-bg">
+                  <div class="profile-pic-container">
+                    <img src="https://randomuser.me/api/portraits/women/20.jpg" alt="Divya Mehra" class="profile-pic">
+                  </div>
+                  <h5 class="profile-name">Divya Mehra</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+   <!-- Downaloads apps -->
+<section class="Download-apps py-5">
+  <div class="container">
+    <!-- Top: Logo and download text -->
+    <div class="text-center mb-4 ">
+      <img src="images/logo.png" alt="logo" class="mb-3" style="max-height: 60px;" />
+      <p class="text-center" style="color:#14A2C6 ">Download the HRVMS app now!</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap mb-4">
+        <a href="https://play.google.com/store/apps/details?id=com.clientserver.hrvms&pli=1" ><img src="images/playstore.png" alt="Google Play" style="height: 50px;" /></a>
+        <img src="images/appstore.png" alt="App Store" style="height: 50px;" />
+      </div>
+    </div>
+
+    <!-- Industry cards -->
+   <div class="row">
+  <!-- Card 1 -->
+  <div class="col-md-6 col-lg-3 mb-4">
+    <div class="card h-100 industry-card-scale">
+      <div class="card-body">
+        <h5 class="card-title">Retail, Commerce & other Industries</h5>
+        <p class="card-text">
+          Lorem Ipsum has been the industry's standard text since an unknown printer took a galley of type and scrambled it.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="col-md-6 col-lg-3 mb-4">
+    <div class="card h-100 industry-card-glow">
+      <div class="card-body">
+        <h5 class="card-title">Healthcare & Life Sciences</h5>
+        <p class="card-text">
+          Our platform transforms healthcare HR processes with security, speed, and compliance.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="col-md-6 col-lg-3 mb-4">
+    <div class="card h-100 industry-card-border">
+      <div class="card-body">
+        <h5 class="card-title">Manufacturing & Logistics</h5>
+        <p class="card-text">
+          Seamlessly manage your operations workforce with real-time attendance and scheduling.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="col-md-6 col-lg-3 mb-4">
+    <div class="card h-100 industry-card-tilt">
+      <div class="card-body">
+        <h5 class="card-title">IT & Software Services</h5>
+        <p class="card-text">
+          Enable tech teams with flexible work policies and smart performance tracking tools.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- App image -->
+    <div class="text-center mt-5">
+      <img src="images/andriodImg.png" alt="App Preview" class="img-fluid" style="max-height: 400px;" />
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="contactus py-5 
+  ">
+  <div class="container">
+    <div class="product-header">
+      <h2 >INSTRESTED IN HRVMS</h2>
+      <h3 >Call and Speak with our team Today</h3>
+    </div>
+
+    <div class="row align-items-center">
+      <!-- Left: Contact Info -->
+      <div class="col-md-6 mb-4 mb-md-0 reachout-sec" data-aos="fade-right">
+        <h4 class="">Reach Out</h4>
+        <p>We'd love to hear from you.</p>
+
+        <div class="mb-4 d-flex align-items-start gap-3">
+          <img src="images/call.png" alt="Call Icon" width="32" height="32" />
+          <div>
+            <h5 class="mb-0">Have any Question?</h5>
+            <a href="tel:+914040009669" class="text-decoration-none text-dark">+91 40 400-09669</a>
+          </div>
+        </div>
+
+        <div class="mb-4 d-flex align-items-start gap-3">
+          <img src="images/mail.png" alt="Mail Icon" width="32" height="32" />
+          <div>
+            <h5 class="mb-0">Write Email</h5>
+            <a href="mailto:support@quantahr.com" class="text-decoration-none text-dark">support@quantahr.com</a>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start gap-3">
+          <img src="images/location.png" alt="Location Icon" width="32" height="32" />
+          <div>
+            <h5 class="mb-0">Visit anytime</h5>
+            <p class="mb-0">#805, 9th Floor, DSL Abacus IT Park, Uppal, Hyderabad, Telangana – 500039</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Image -->
+      <div class="col-md-6 text-center" data-aos="fade-up">
+        <img src="images/contactus.png" alt="Contact" class="img-fluid rounded" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+ <!-- follow Us -->
+  <section class="follow-Us">
+     <div class="text-center">
+        <h3>Start Working Smarter Today</h3>
+        <p>Start With EHRVMS</p>
+     </div>
+
+     <!-- footer -->
+  <footer class="footer  pt-1 pb-4">
+  <div class="container text-md-left">
+    <div class="row text-md-left">
+
+      <!-- Company -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+        <h5 class="text-uppercase fw-bold mb-4">Company</h5>
+        <p><a href="#" class=" text-decoration-none">About Us</a></p>
+        <p><a href="#" class=" text-decoration-none">Careers</a></p>
+        <p><a href="#" class=" text-decoration-none">Press</a></p>
+        <p><a href="#" class=" text-decoration-none">Blog</a></p>
+      </div>
+
+      <!-- Our Services -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+        <h5 class="text-uppercase fw-bold mb-4">Our Services</h5>
+        <p><a href="#" class=" text-decoration-none">HR Management</a></p>
+        <p><a href="#" class=" text-decoration-none">Recruitment</a></p>
+        <p><a href="#" class=" text-decoration-none">Payroll</a></p>
+        <p><a href="#" class=" text-decoration-none">Employee Portal</a></p>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+        <h5 class="text-uppercase fw-bold mb-4">Contact</h5>
+        <p><i class="fas fa-map-marker-alt me-2"></i>Uppal,Hyderabad</p>
+        <p><i class="fas fa-envelope me-2"></i>support@company.com</p>
+        <p><i class="fas fa-phone me-2"></i>+91 40 400-09669</p>
+        <p><i class="fas fa-clock me-2"></i>Mon - Fri: 11am - 8pm</p>
+      </div>
+
+      <!-- Follow Us -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+        <h5 class="text-uppercase fw-bold mb-4">Follow Us</h5>
+        <a href="#" class=" me-3 fs-5"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class=" fs-5"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 bottom_footer">
+    <img src="images/logo2.png" alt="logo" width="150px" />
+    &copy;Copyright 2025. All rights reserved. EHRVMS Designed by ClientServer Technology Solutions
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+
+    <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+</body>
+</html>

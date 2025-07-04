@@ -1,0 +1,699 @@
+/* Global Styles */
+body {
+  scroll-behavior: smooth;
+ font-family: 'Poppins', sans-serif !important;
+ overflow-x: hidden;
+}
+
+/* Header section */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+.logo-pulse {
+  animation: pulse 3s infinite ease-in-out;
+}
+
+.navbar-brand img{
+    width:100px;
+}
+.nav-items {
+  list-style-type: none;
+  display: flex; /* <-- REMOVE this to allow Bootstrap's responsive behavior */
+  gap: 10px;
+  margin-left: 50px;
+}
+
+.nav-link{
+    color:black;
+}
+ ul li{
+  padding-right: 30px;;
+ }
+ .navbar-toggler-icon {
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+ }
+ 
+.login-btn {
+  position: relative;
+  display: inline-block;
+  padding: 8px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #343a40;
+  background-color: transparent;
+  border-radius: 50px;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.4s ease, border-color 0.4s ease;
+}
+
+.login-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 150%;
+  background: linear-gradient(135deg, #343a40 0%, #343a40 100%);
+  transform: translate(-100%, 100%) rotate(45deg);
+  transition: transform 0.6s ease-in-out;
+  z-index: -1;
+  border-radius: 0;
+}
+
+.login-btn:hover::before {
+  transform: translate(0, 0) rotate(45deg);
+}
+
+.login-btn:hover {
+  color: #fff;
+  border-color: #343a40;
+    box-shadow: 0 0 15px rgba(32, 178, 170, 0.6), 0 0 25px rgba(32, 178, 170, 0.3);
+
+}
+.login-option{
+  font-size: 18px;
+  padding: 10px 15px;
+}
+
+
+/* Custom hero section */
+#hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:20px;
+  background-color: #F8F9FB;
+}
+.hero-content{
+  margin-left: 30px;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+.lead{
+  text-align: start;
+  max-width: 750px;
+}
+
+.card-title {
+  color: #0d6efd;
+}
+.card-text:last-child {
+     margin-bottom: 11px;
+     margin-top: 16px;
+}
+
+.herosec-2 img{
+  width:500px;
+}
+.hero-container{
+  display: flex;    
+  flex-direction: column;
+}
+
+/* form container */
+.form-border-animated {
+  position: relative;
+  padding: 0px; /* space for the border */
+  border-radius: 12px;
+  background: linear-gradient(270deg, #00AB66, #F4C430, #14A2C6, #9B0060);
+  background-size: 600% 600%;
+  animation: gradientMove 5s linear infinite;
+}
+
+.form-border-animated::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  border-radius: inherit;
+  animation: inherit;
+  filter: blur(6px); /* soft glowing effect */
+}
+
+.form-container {
+  background-color: #F8F9FB;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Animation keyframes */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.form-label {
+  text-align: left !important;
+  display: block;
+}
+ 
+
+    .submit-btn {
+      background-color: #14A2C6;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+    .product-header{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .product-header h2{
+      font-size: 15px;
+      color:#14A2C6;
+    }
+    .product-header p{
+      color: #727272;
+      font-size: 14px;
+    }
+
+
+
+    /* feature section */
+    .feature-card {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow:0 0 10px;
+  border: 2px solid rgb(255, 153, 0);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Responsive image alignment */
+@media (max-width: 768px) {
+  .feature-card .card-body {
+    text-align: center;
+  }
+}
+
+    /* Trusted Organization */
+.tructed-organiation {
+  background-color: #E9F6F9;
+
+  overflow: hidden;
+}
+
+.tructed-organiation p {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.logo-marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.logo-marquee {
+  display: flex;
+  animation: scrollLeft 40s linear infinite;
+}
+
+.logo-track {
+  display: flex;
+  gap: 40px;
+  margin-left: 40px;
+  margin-top: 28px;
+  margin-bottom: 38px;
+}
+
+.logo-marquee img {
+  max-height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+ /* upgrade feature */
+
+ .icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.icon-circle img {
+  width: 70%;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Hover effect on card */
+.hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  height: 100%;
+  padding-bottom: 30px;
+  border-radius: 20px;
+}
+
+/* Industries serve */
+.industries-serve{
+  background-color: #F8F8FB;
+  padding-top: 30px;
+}
+.industry-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.industry-card {
+  background-color: transparent;
+  border: none;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+ 
+}
+
+/* .industry-card:hover {
+  background-color: white;
+} */
+.industry-card div:hover{
+    box-shadow: 0 0 15px rgba(32, 178, 170, 0.6), 0 0 25px rgba(32, 178, 170, 0.3);
+    border-radius: 15px;
+  transform: translateY(-6px);
+}
+
+ /* Testimonial */
+
+.testimonials-section {
+   background-color: #E9F6F9;
+    padding: 60px 0;
+}
+
+.customer-reviews-heading {
+    color: #8a2be2; /* Light purple for the heading */
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.customer-reviews-subheading {
+    color: #6c757d; /* Grey for the subheading */
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure cards are same height */
+}
+
+.testimonial-content {
+    padding: 30px;
+    position: relative;
+    flex-grow: 1; /* Allows content to take available space */
+}
+
+
+
+.testimonial-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0; /* Remove default margin */
+    padding: 0 20px; /* Add padding to prevent text from touching icons */
+    text-align: center; /* Center the text */
+    margin-bottom: 30px;
+}
+
+.testimonial-footer {
+    position: relative;
+    padding-top: 50px; /* Space for the profile picture */
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; /* Push content to bottom */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* Background colors for footers */
+.green-bg {
+    background-color: #20b2aa; /* Teal green */
+    min-height: 120px; /* Ensure a minimum height for the colored section */
+    border-top-left-radius: 50%;
+}
+
+.purple-bg {
+    background-color: #8a2be2; /* Purple */
+    min-height: 120px;
+    border-top-left-radius: 50%;
+}
+
+.blue-bg {
+    background-color: #6495ed; /* Cornflower blue */
+    min-height: 120px;
+        border-top-left-radius: 50%;
+
+}
+
+.profile-pic-container {
+    position: absolute;
+    top: -40px; /* Adjust to position the image halfway over the content */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff; /* Background for the border */
+    border-radius: 50%;
+    padding: 5px; /* Creates a white border around the image */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-name {
+    color: #fff;
+    margin-top: 10px; /* Space from the profile picture */
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.carousel-inner {
+  margin-top: 50px;
+}
+.carousel-indicators {
+   top:19rem;
+
+}
+.carousel-inner {
+  margin-bottom: 30px;
+}
+.carousel-indicators [data-bs-target] {
+  background-color: blueviolet;
+    width: 12px;
+  height: 12px;
+  border-radius: 50%;  
+}
+ /* Downlad app section */
+
+ .Download-apps{
+  background-color: #F8F8FB;
+ }
+.Download-apps {
+  background-color: #f8f9fa;
+}
+
+.Download-apps .card-body img {
+  width: 40px;
+  height: auto;
+}
+
+.Download-apps p,
+.Download-apps h5 {
+  text-align: center;
+}
+/* Common Base Styling */
+.card {
+  transition: all 0.4s ease;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Card 1: Scale */
+.industry-card-scale:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Card 2: Glow */
+.industry-card-glow:hover {
+  box-shadow: 0 0 15px rgba(32, 178, 170, 0.6), 0 0 25px rgba(32, 178, 170, 0.3);
+}
+
+/* Card 3: Border Slide */
+.industry-card-border {
+  position: relative;
+  overflow: hidden;
+}
+.industry-card-border::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #8a2be2;
+  bottom: 0;
+  left: -100%;
+  transition: 0.4s ease;
+}
+.industry-card-border:hover::after {
+  left: 0;
+}
+
+/* Card 4: Tilt */
+.industry-card-tilt:hover {
+  transform: rotate(-1deg) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+ /* industries-serve */
+#contact h2,
+#contact h3 {
+  color: #343a40;
+}
+
+#contact h5 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#contact a:hover {
+  color: #8a2be2; /* Light purple hover for links */
+}
+
+
+/*  Intrested hrvms */
+
+
+
+/* contactus */
+
+.contactus {
+  background-color: #E9F6F9;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+
+.form-info {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+ 
+}
+
+.reachout-sec{
+  background-color: white;
+  padding: 30px;
+ max-width: 408px;
+    margin: 10px auto;
+    border-radius: 15px;
+
+}
+.reachout-sec div{
+  padding-top: 7px;
+}
+.reachout-sec img{
+  margin-top: 14px;
+}
+.reachout-sec p{
+  width:300px;
+}
+.contact-data {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.contact-data img {
+  width: 40px;
+  height: 40px;
+}
+
+.contact-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* follow us */
+
+.follow-Us div{
+  text-align: start;
+  margin-top: 16px;
+  margin-left: 50px;
+}
+ .bottom_footer{
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+ }
+/* Responsive Design */
+
+
+@media(max-width:1024px) and (min-width:768px){
+  .carousel-indicators{
+    top:23rem;
+  }
+}
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+        margin-left: 18rem;
+    }
+}
+@media (max-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: column;
+        margin-left: 12rem;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0rem;
+    }
+    .login-btn{
+      display: none;
+    }
+    .navbar-brand img {
+    width: 80px;
+    }
+}
+
+
+@media (max-width: 768px) {
+  .logo-marquee {
+    gap: 20px;
+  }
+
+  .tructed-organiation p {
+    font-size: 1rem;
+  }
+
+  .logo-marquee img {
+    max-height: 40px;
+  }
+   .Download-apps .card-body {
+    text-align: center;
+  }
+
+  .Download-apps .card-body img {
+    margin: 0 auto 10px;
+    display: block;
+  }
+
+  .Download-apps p,
+  .Download-apps h5 {
+    text-align: center;
+  }
+  .carousel-indicators{
+    display: none;
+  }
+  .testimonial-content {
+    padding: 5px;
+  }
+  .follow-Us div{
+    margin-left: 10px;
+  }
+  .reachout-sec p {
+    width: 200px;
+}
+}
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1471px;
+    }
+    .follow-Us div{
+      margin-left: 120px;
+    }
+}
