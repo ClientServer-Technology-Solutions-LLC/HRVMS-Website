@@ -175,7 +175,11 @@ body {
   text-align: left !important;
   display: block;
 }
- 
+.form-container input::placeholder,
+.form-container select::placeholder {
+  font-size: 0.85rem; 
+}
+
 
     .submit-btn {
       background-color: #14A2C6;
